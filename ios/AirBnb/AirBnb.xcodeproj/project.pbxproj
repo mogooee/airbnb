@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4301921283B5C91000796DC /* BuildTools in Resources */ = {isa = PBXBuildFile; fileRef = E4301920283B4B97000796DC /* BuildTools */; };
 		E4409DD4283B2A0E005C6BA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4409DD3283B2A0E005C6BA1 /* AppDelegate.swift */; };
 		E4409DD6283B2A0E005C6BA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4409DD5283B2A0E005C6BA1 /* SceneDelegate.swift */; };
 		E4409DD8283B2A0E005C6BA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4409DD7283B2A0E005C6BA1 /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4301920283B4B97000796DC /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BuildTools; path = ../BuildTools; sourceTree = "<group>"; };
 		E4409DD0283B2A0E005C6BA1 /* AirBnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirBnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4409DD3283B2A0E005C6BA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4409DD5283B2A0E005C6BA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		E4409DE1283B2A12005C6BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45F2A7A283B2CCC00F0CB7C /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		E45F2A7B283B2CD300F0CB7C /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		E45F2A7D283B2F2200F0CB7C /* .swiftformat */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftformat; sourceTree = "<group>"; };
+		E45F2A7E283B2F4F00F0CB7C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,13 +41,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E430191F283B4B97000796DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4301920283B4B97000796DC /* BuildTools */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E4409DC7283B2A0E005C6BA1 = {
 			isa = PBXGroup;
 			children = (
+				E45F2A7D283B2F2200F0CB7C /* .swiftformat */,
+				E45F2A7E283B2F4F00F0CB7C /* .swiftlint.yml */,
 				E45F2A7A283B2CCC00F0CB7C /* debug.xcconfig */,
 				E45F2A7B283B2CD300F0CB7C /* release.xcconfig */,
 				E4409DD2283B2A0E005C6BA1 /* AirBnb */,
 				E4409DD1283B2A0E005C6BA1 /* Products */,
+				E430191F283B4B97000796DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +73,22 @@
 		E4409DD2283B2A0E005C6BA1 /* AirBnb */ = {
 			isa = PBXGroup;
 			children = (
+				E45F2A81283B30C300F0CB7C /* Resources */,
 				E4409DD3283B2A0E005C6BA1 /* AppDelegate.swift */,
 				E4409DD5283B2A0E005C6BA1 /* SceneDelegate.swift */,
 				E4409DD7283B2A0E005C6BA1 /* ViewController.swift */,
-				E4409DDC283B2A12005C6BA1 /* Assets.xcassets */,
-				E4409DDE283B2A12005C6BA1 /* LaunchScreen.storyboard */,
 				E4409DE1283B2A12005C6BA1 /* Info.plist */,
 			);
 			path = AirBnb;
+			sourceTree = "<group>";
+		};
+		E45F2A81283B30C300F0CB7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4409DDC283B2A12005C6BA1 /* Assets.xcassets */,
+				E4409DDE283B2A12005C6BA1 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +135,8 @@
 				Base,
 			);
 			mainGroup = E4409DC7283B2A0E005C6BA1;
+			packageReferences = (
+			);
 			productRefGroup = E4409DD1283B2A0E005C6BA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4301921283B5C91000796DC /* BuildTools in Resources */,
 				E4409DE0283B2A12005C6BA1 /* LaunchScreen.storyboard in Resources */,
 				E4409DDD283B2A12005C6BA1 /* Assets.xcassets in Resources */,
 			);
@@ -287,6 +313,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +342,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

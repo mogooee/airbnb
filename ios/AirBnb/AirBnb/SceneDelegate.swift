@@ -8,17 +8,16 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-	var window: UIWindow?
+  var window: UIWindow?
 
-	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-		guard let scene = (scene as? UIWindowScene) else { return }
-		self.window = UIWindow(windowScene: scene)
+  func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
+    guard let scene = (scene as? UIWindowScene) else {
+      return
+    }
+    self.window = UIWindow(windowScene: scene)
 
-		self.window?.rootViewController = ViewController()
+    self.window?.rootViewController = ViewController()
 
-		self.window?.makeKeyAndVisible()
-
-	}
-
+    self.window?.makeKeyAndVisible()
+  }
 }
-
