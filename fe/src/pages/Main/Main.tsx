@@ -1,7 +1,12 @@
 import React from 'react';
+import GNB from 'components/GNB/GNB';
 
 function Main() {
-  return <h1>Main</h1>;
+  return (
+    <header>
+      <GNB />
+    </header>
+  );
 }
 
 export default Main;

@@ -31,7 +31,8 @@
             "warn",
             {
                 "useTabs": false,
-                "endOfLine": "auto"
+                "endOfLine": "auto",
+                "printWidth": 120
             }
         ]
     },
