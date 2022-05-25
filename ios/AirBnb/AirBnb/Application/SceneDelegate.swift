@@ -21,8 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let wishListController = WishListViewController()
     let reservationController = ReservationViewController()
 
-    tabBarController.tabBar.tintColor = .black
-
     homeController.tabBarItem = .init(
       title: "검색",
       image: .magnifier,

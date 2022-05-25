@@ -9,12 +9,16 @@ import SnapKit
 import UIKit
 
 class WishListViewController: UIViewController {
+  // MARK: - Life Cycles
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.configureUI()
   }
 
+  // MARK: - UI Configuration
+
   private func configureUI() {
-    self.view.backgroundColor = .systemMint
+    self.view.backgroundColor = .systemBackground
   }
 }
