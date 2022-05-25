@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/github.io/airbnb/static/js/main.ff8f9933.js",
-    "static/media/hero-img.png": "/github.io/airbnb/static/media/hero-img.68f53f85fa68b606f901.png",
-    "static/media/online-experience.svg": "/github.io/airbnb/static/media/online-experience.898ae4d016e12d8d2f88d0b5c69d62bb.svg",
-    "static/media/logo.svg": "/github.io/airbnb/static/media/logo.1f3cd5c80741af101bed5f96f5e6f4df.svg",
-    "static/media/login.svg": "/github.io/airbnb/static/media/login.c38d7c0a850a88ea9cc70f4c47780879.svg",
-    "static/media/experience.svg": "/github.io/airbnb/static/media/experience.e59f0b4c9dc3e9744947d45d505a7705.svg",
-    "static/media/accomodation.svg": "/github.io/airbnb/static/media/accomodation.6e984c7d1fe134db9a2b995871ac0f5f.svg",
-    "index.html": "/github.io/airbnb/index.html",
-    "main.ff8f9933.js.map": "/github.io/airbnb/static/js/main.ff8f9933.js.map"
+    "main.js": "/airbnb/static/js/main.f644c54b.js",
+    "static/media/hero-img.png": "/airbnb/static/media/hero-img.68f53f85fa68b606f901.png",
+    "static/media/online-experience.svg": "/airbnb/static/media/online-experience.898ae4d016e12d8d2f88d0b5c69d62bb.svg",
+    "static/media/logo.svg": "/airbnb/static/media/logo.1f3cd5c80741af101bed5f96f5e6f4df.svg",
+    "static/media/login.svg": "/airbnb/static/media/login.c38d7c0a850a88ea9cc70f4c47780879.svg",
+    "static/media/experience.svg": "/airbnb/static/media/experience.e59f0b4c9dc3e9744947d45d505a7705.svg",
+    "static/media/accomodation.svg": "/airbnb/static/media/accomodation.6e984c7d1fe134db9a2b995871ac0f5f.svg",
+    "index.html": "/airbnb/index.html",
+    "main.f644c54b.js.map": "/airbnb/static/js/main.f644c54b.js.map"
   },
   "entrypoints": [
-    "static/js/main.ff8f9933.js"
+    "static/js/main.f644c54b.js"
   ]
 }
