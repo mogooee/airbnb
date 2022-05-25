@@ -28,9 +28,10 @@
             }
         ],
         "prettier/prettier": [
-            "error",
+            "warn",
             {
-                "useTabs": false
+                "useTabs": false,
+                "endOfLine": "auto"
             }
         ]
     },
@@ -42,6 +43,9 @@
                     ".jsx",
                     ".ts",
                     ".tsx"
+                ],
+                "paths": [
+                    "src"
                 ]
             }
         }
