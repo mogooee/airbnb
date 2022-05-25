@@ -1,12 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-import { ReactComponent as AccomodationIcon } from 'icons/svg/accomodation.svg';
-import { ReactComponent as ExperienceIcon } from 'icons/svg/experience.svg';
-import { ReactComponent as OnlineExperienceIcon } from 'icons/svg/online-experience.svg';
-
-const StyledMenu = styled.ul`
-  display: flex;
-`;
+import StyledMenu from 'components/GNB/Menu/Menu.styled';
+import { ReactComponent as AccomodationIcon } from 'img/svg/accomodation.svg';
+import { ReactComponent as ExperienceIcon } from 'img/svg/experience.svg';
+import { ReactComponent as OnlineExperienceIcon } from 'img/svg/online-experience.svg';
 
 function Menu() {
   return (

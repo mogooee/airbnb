@@ -1,14 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import StyledGNB from 'components/GNB/GNB.styled';
+import Logo from 'components/GNB/Logo/Logo';
+import Menu from 'components/GNB/Menu/Menu';
 import AccountMenu from 'components/GNB/AccountMenu/AccountMenu';
-import Menu from './Menu/Menu';
-import Logo from './Logo/Logo';
-
-const StyledGNB = styled.div`
-  display: flex;
-  justify-conents: center;
-  align-items: center;
-`;
 
 function GNB() {
   return (
