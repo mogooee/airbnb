@@ -5,6 +5,9 @@ import Routers from 'components/Routers/Routers';
 
 const GlobalStyles = createGlobalStyle`
     ${reset};
+    *{
+      box-sizing:border-box;
+    }
 `;
 
 export default function App() {
