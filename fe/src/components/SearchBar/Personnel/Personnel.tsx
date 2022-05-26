@@ -17,7 +17,7 @@ export default function Personnel() {
         <h3>인원</h3>
         <p>게스트 추가</p>
       </section>
-      <Button disableRipple disableFocusRipple>
+      <Button style={{ backgroundColor: 'transparent' }}>
         <SearchIcon />
       </Button>
     </StyledPersonnel>

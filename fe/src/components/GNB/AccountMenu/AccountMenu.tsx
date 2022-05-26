@@ -4,7 +4,7 @@ import { ReactComponent as LoginIcon } from 'img/svg/login.svg';
 
 export default function AccountMenu() {
   return (
-    <Button disableRipple disableFocusRipple>
+    <Button disableRipple disableFocusRipple style={{ backgroundColor: 'transparent' }}>
       <LoginIcon className="loginIcon" />
     </Button>
   );
