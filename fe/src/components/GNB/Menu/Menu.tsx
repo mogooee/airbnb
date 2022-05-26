@@ -7,15 +7,17 @@ import { ReactComponent as OnlineExperienceIcon } from 'img/svg/online-experienc
 export default function Menu() {
   return (
     <StyledMenu className="menu">
-      <li>
-        <AccomodationIcon />
-      </li>
-      <li>
-        <ExperienceIcon />
-      </li>
-      <li>
-        <OnlineExperienceIcon />
-      </li>
+      <ul>
+        <li>
+          <AccomodationIcon />
+        </li>
+        <li>
+          <ExperienceIcon />
+        </li>
+        <li>
+          <OnlineExperienceIcon />
+        </li>
+      </ul>
     </StyledMenu>
   );
 }
