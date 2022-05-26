@@ -2,9 +2,9 @@ import React from 'react';
 import { Button } from '@mui/material';
 import { ReactComponent as DeleteIcon } from 'img/svg/delete.svg';
 
-export default function Delete() {
+export default function DeleteButton() {
   return (
-    <Button disableRipple disableFocusRipple>
+    <Button style={{ backgroundColor: 'transparent' }}>
       <DeleteIcon />
     </Button>
   );

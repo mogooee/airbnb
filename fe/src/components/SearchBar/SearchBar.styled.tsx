@@ -29,7 +29,7 @@ export default styled.div`
   }
 
   section {
-    margin-left: 24px;
+    padding-left: 24px;
     h3 {
       font-weight: 700;
       font-size: 12px;

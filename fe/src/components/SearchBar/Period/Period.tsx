@@ -1,29 +1,16 @@
 import React from 'react';
-import StyledPeriod from 'components/SearchBar/Period/Period.styled';
+import SearchSection from 'components/SearchBar/SearchSection/SearchSection';
+import { SectionProps } from 'components/SearchBar/types';
 
-function CheckIn() {
-  return (
-    <section>
-      <h3>체크인</h3>
-      <p>날짜입력</p>
-    </section>
-  );
-}
+export default function Period({ search, addSearch }: SectionProps) {
+  const { title, defaultValue, value } = search;
+  const [checkInTitle, checkOutTitle] = title;
+  const { checkIn, checkOut } = value;
 
-function CheckOut() {
   return (
-    <section>
-      <h3>체크아웃</h3>
-      <p>날짜입력</p>
-    </section>
-  );
-}
-
-export default function Period() {
-  return (
-    <StyledPeriod>
-      <CheckIn />
-      <CheckOut />
-    </StyledPeriod>
+    <>
+      <SearchSection title={checkInTitle} value={checkIn || defaultValue} />
+      <SearchSection title={checkOutTitle} value={checkOut || defaultValue} />
+    </>
   );
 }

@@ -1,17 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import SearchSection from 'components/SearchBar/SearchSection/SearchSection';
+import { SectionProps } from 'components/SearchBar/types';
 
-const StyledPrice = styled.li`
-  width: 233px;
-`;
+export default function Price({ search, addSearch }: SectionProps) {
+  const { title, defaultValue, value } = search;
+  const { minPrice, maxPrice } = value;
+  const price = minPrice || maxPrice ? `${minPrice}~${maxPrice}` : defaultValue;
 
-export default function Price() {
-  return (
-    <StyledPrice>
-      <section>
-        <h3>요금</h3>
-        <p>금액대 설정</p>
-      </section>
-    </StyledPrice>
-  );
+  return <SearchSection title={title} value={price} />;
 }

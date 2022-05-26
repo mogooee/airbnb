@@ -1,30 +1,11 @@
 import React from 'react';
-import { Button } from '@mui/material';
-import { ReactComponent as SearchIcon } from 'img/svg/search-icon.svg';
-import StyledPersonnel from 'components/SearchBar/Personnel/Personnel.styled';
+import SearchSection from 'components/SearchBar/SearchSection/SearchSection';
+import { SectionProps } from 'components/SearchBar/types';
 
-function PersonnelArea() {
-  return (
-    <section>
-      <h3>인원</h3>
-      <p>게스트 추가</p>
-    </section>
-  );
-}
+export default function Personnel({ search, addSearch }: SectionProps) {
+  const { title, defaultValue, value } = search;
+  const { adult, teenager } = value;
+  const guest = adult + teenager;
 
-function SearchButton() {
-  return (
-    <Button style={{ backgroundColor: 'transparent' }}>
-      <SearchIcon />
-    </Button>
-  );
-}
-
-export default function Personnel() {
-  return (
-    <StyledPersonnel>
-      <PersonnelArea />
-      <SearchButton />
-    </StyledPersonnel>
-  );
+  return <SearchSection title={title} value={guest || defaultValue} />;
 }
