@@ -15,6 +15,12 @@ export default styled.nav`
     }
   }
 
+  li {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   li + li {
     margin-left: 24px;
   }
