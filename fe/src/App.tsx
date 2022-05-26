@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
     ${reset};
 `;
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <GlobalStyles />
@@ -15,5 +15,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

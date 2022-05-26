@@ -11,7 +11,7 @@ const Header = styled.header`
   background-repeat: no-repeat;
 `;
 
-function Main() {
+export default function Main() {
   return (
     <main>
       <Header>
@@ -20,5 +20,3 @@ function Main() {
     </main>
   );
 }
-
-export default Main;

@@ -4,7 +4,7 @@ import { ReactComponent as AccomodationIcon } from 'img/svg/accomodation.svg';
 import { ReactComponent as ExperienceIcon } from 'img/svg/experience.svg';
 import { ReactComponent as OnlineExperienceIcon } from 'img/svg/online-experience.svg';
 
-function Menu() {
+export default function Menu() {
   return (
     <StyledMenu className="menu">
       <li>
@@ -19,5 +19,3 @@ function Menu() {
     </StyledMenu>
   );
 }
-
-export default Menu;

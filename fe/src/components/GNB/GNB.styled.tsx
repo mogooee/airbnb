@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledGNB = styled.div`
+export default styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -10,5 +10,3 @@ const StyledGNB = styled.div`
     cursor: pointer;
   }
 `;
-
-export default StyledGNB;
