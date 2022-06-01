@@ -13,6 +13,12 @@ const StyledLi = styled.li`
     width: 194px;
   }
   position: relative;
+  ${({ isActive }) =>
+    isActive &&
+    `
+  background-color:#fff;
+  box-shadow: 0px 0px 10px 3px #ebebeb;
+  `}
 `;
 
 export default function SearchList({
@@ -36,18 +42,24 @@ export default function SearchList({
   };
   const handleModalClose = (event: React.MouseEvent<HTMLButtonElement>) => {
     setActiveModal(false);
+    setContent('');
     event.stopPropagation();
   };
 
   const searchList = search[id];
   const { value } = searchList;
   const hasValue = () => Object.values(value).filter((e) => e).length > 0;
+  const initValue = () => {
+    Object.keys(value).forEach((key) => {
+      value[key] = null;
+    });
+  };
   const isCurrentActive = () => content === id;
 
   return (
-    <StyledLi role="button" tabIndex={0} onClick={handleModalOpen} id={id}>
+    <StyledLi role="button" tabIndex={0} onClick={handleModalOpen} id={id} isActive={isCurrentActive()}>
       <Element search={searchList} addSearch={addSearch} />
-      {hasValue() && <DeleteButton />}
+      {hasValue() && <DeleteButton initValue={initValue} />}
       {isCurrentActive() && (
         <ModalPortal>
           <Modal shown={isActiveModal} onClose={handleModalClose}>

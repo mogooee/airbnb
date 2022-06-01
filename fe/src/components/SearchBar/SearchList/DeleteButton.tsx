@@ -2,9 +2,9 @@ import React from 'react';
 import { Button } from '@mui/material';
 import { ReactComponent as DeleteIcon } from 'img/svg/delete.svg';
 
-export default function DeleteButton() {
+export default function DeleteButton({ initValue }: { initValue: () => void }) {
   return (
-    <Button style={{ backgroundColor: 'transparent' }}>
+    <Button style={{ backgroundColor: 'transparent' }} onClick={initValue}>
       <DeleteIcon />
     </Button>
   );
