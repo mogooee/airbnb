@@ -8,7 +8,7 @@ export default styled.div`
   margin: 0 auto;
   margin-top: 32px;
   border-radius: 60px;
-  background-color: #fff;
+  background-color: ${({ isActive }) => (isActive ? '#eee' : '#fff')};
   z-index: 1;
   position: relative;
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ActiveContext } from 'context/ModalProvider';
+import { ActiveContext, useContentModal } from 'context/ModalProvider';
 import styled from 'styled-components';
 import { Button } from '@mui/material';
 import { ReactComponent as SearchIcon } from 'img/svg/search-icon.svg';
@@ -10,10 +10,6 @@ import Period from 'components/SearchBar/Period/Period';
 import Price from 'components/SearchBar/Price/Price';
 import Personnel from 'components/SearchBar/Personnel/Personnel';
 import SearchList from 'components/SearchBar/SearchList/SearchList';
-
-const StyledUl = styled.ul`
-  padding-left: 20px;
-`;
 
 const SplitLine = styled.div`
   width: 1px;
@@ -29,17 +25,19 @@ function SearchButton() {
 }
 
 export default function SearchBar() {
+  const content = useContentModal();
+
   return (
-    <StyledSearchBar>
+    <StyledSearchBar isActive={content}>
       <span id="searchLabel">검색 시작하기</span>
-      <StyledUl>
+      <ul>
         <SearchList Element={Period} id="period" />
         <SplitLine />
         <SearchList Element={Price} id="price" />
         <SplitLine />
         <SearchList Element={Personnel} id="personnel" />
         <SearchButton />
-      </StyledUl>
+      </ul>
     </StyledSearchBar>
   );
 }
