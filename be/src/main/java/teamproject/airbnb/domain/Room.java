@@ -42,6 +42,7 @@ public class Room {
 
 	//주소, 좌표 추가해야될듯
 	private String name;
+	private String address;
 	private String description;
 	private String furnitureDescription;
 	private Long price;
@@ -64,6 +65,9 @@ public class Room {
 			.anyMatch(r -> r.getCheckOut().isBefore(checkIn));
 	}
 
+	public Boolean checkPrice(Long minimumPrice, Long maximumPrice) {
+		return (this.price >= minimumPrice) && (this.price <= maximumPrice);
+	}
 
 	// TODO 방 입주
 	public void booked() {

@@ -8,17 +8,15 @@
 import SnapKit
 import UIKit
 
-class WishListViewController: UIViewController {
+final class WishListViewController: UIViewController {
   // MARK: - Life Cycles
-
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.configureUI()
+    configureUI()
   }
 
   // MARK: - UI Configuration
-
   private func configureUI() {
-    self.view.backgroundColor = .systemBackground
+    view.backgroundColor = .systemBackground
   }
 }
