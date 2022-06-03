@@ -8,7 +8,7 @@ import teamproject.airbnb.service.ReservationService;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/reservation")
-public class ReservationApiController {
+public class ReservationController {
 
 	private final ReservationService reservationService;
 
