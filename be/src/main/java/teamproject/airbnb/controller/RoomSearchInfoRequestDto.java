@@ -11,12 +11,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RoomSearchInfoRequestDto {
 
-	private Long roomCount;
+	private LocalDate checkIn;
+	private LocalDate checkOut;
 	private Long minimumPrice;
 	private Long maximumPrice;
 	private Long guestCount;
 	private Long kidCount;
 	private List<Long> wishList;
-	private LocalDate checkIn;
-	private LocalDate checkOut;
 }
