@@ -9,8 +9,9 @@ import teamproject.airbnb.service.RoomQuantityDto;
 @AllArgsConstructor
 public class RoomQuantityResponseDto {
 
-	private String strPriceRange;
-	private String strAveragePrice;
+	private String minimumFormat;
+	private String maximumFormat;
+	private String averageFormat;
 	private List<Long> priceRange;
 	private List<Long> roomQuantity;
 
@@ -20,11 +21,7 @@ public class RoomQuantityResponseDto {
 		String maximumFormat = roomQuantityDto.getMaximumPriceFormat();
 		String averageFormat = roomQuantityDto.getAveragePriceFormat();
 
-		String strPriceRange = "\\" + minimumFormat + "-" + maximumFormat + "+";
-		String strAveragePrice = "평균 1박 요금은 \\" + averageFormat + "입니다.";
-
-		return new RoomQuantityResponseDto(strPriceRange, strAveragePrice,
-			roomQuantityDto.getPriceRange(),
-			roomQuantityDto.getRoomQuantity());
+		return new RoomQuantityResponseDto(minimumFormat, maximumFormat, averageFormat,
+			roomQuantityDto.getPriceRange(), roomQuantityDto.getRoomQuantity());
 	}
 }
