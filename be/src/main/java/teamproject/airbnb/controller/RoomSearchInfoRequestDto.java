@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RequestRoomSearchInfo {
+public class RoomSearchInfoRequestDto {
 
 	private Long roomCount;
 	private Long minimumPrice;

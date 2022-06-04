@@ -20,14 +20,14 @@ public class RoomSimpleInfoResponseDto {
 	List<RoomSimpleInfoDto> roomSimpleInfoDtos = new ArrayList<>();
 
 	public static RoomSimpleInfoResponseDto from(List<RoomSimpleInfoDto> roomSimpleInfoDtos,
-		RequestRoomSearchInfo requestRoomSearchInfo) {
+		RoomSearchInfoRequestDto roomSearchInfoRequestDto) {
 
-		LocalDate checkIn = requestRoomSearchInfo.getCheckIn();
-		LocalDate checkOut = requestRoomSearchInfo.getCheckOut();
-		Long guestCount = requestRoomSearchInfo.getGuestCount();
-		Long kidCount = requestRoomSearchInfo.getKidCount();
-		Long minimumPrice = requestRoomSearchInfo.getMinimumPrice();
-		Long maximumPrice = requestRoomSearchInfo.getMaximumPrice();
+		LocalDate checkIn = roomSearchInfoRequestDto.getCheckIn();
+		LocalDate checkOut = roomSearchInfoRequestDto.getCheckOut();
+		Long guestCount = roomSearchInfoRequestDto.getGuestCount();
+		Long kidCount = roomSearchInfoRequestDto.getKidCount();
+		Long minimumPrice = roomSearchInfoRequestDto.getMinimumPrice();
+		Long maximumPrice = roomSearchInfoRequestDto.getMaximumPrice();
 
 		return new RoomSimpleInfoResponseDto(checkIn, checkOut, guestCount, kidCount, minimumPrice,
 			maximumPrice, roomSimpleInfoDtos);
