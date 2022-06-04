@@ -51,7 +51,7 @@ public class RoomController {
 		RoomSearchInfoRequestDto requestDto = new RoomSearchInfoRequestDto(checkIn, checkOut,
 			minimumPrice, maximumPrice, guestCount, kidCount, wishList);
 
-		return RoomSimpleInfoResponseDto.from(roomService.loadSimpleInfoList(
+		return RoomSimpleInfoResponseDto.of(roomService.loadSimpleInfoList(
 				requestDto),
 			requestDto);
 	}

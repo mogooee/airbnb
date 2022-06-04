@@ -11,25 +11,24 @@ import teamproject.airbnb.service.RoomSimpleInfoDto;
 @AllArgsConstructor
 public class RoomSimpleInfoResponseDto {
 
-	LocalDate checkIn;
-	LocalDate checkOut;
-	Long guestCount;
-	Long kidCount;
-	Long minimumPrice;
-	Long maximumPrice;
-	List<RoomSimpleInfoDto> roomSimpleInfoDtos = new ArrayList<>();
+	private LocalDate checkIn;
+	private LocalDate checkOut;
+	private Long guestCount;
+	private Long kidCount;
+	private Long minimumPrice;
+	private Long maximumPrice;
+	private List<RoomSimpleInfoDto> roomSimpleInfoDtos = new ArrayList<>();
 
-	public static RoomSimpleInfoResponseDto from(List<RoomSimpleInfoDto> roomSimpleInfoDtos,
+	public static RoomSimpleInfoResponseDto of(List<RoomSimpleInfoDto> roomSimpleInfoDtos,
 		RoomSearchInfoRequestDto roomSearchInfoRequestDto) {
 
-		LocalDate checkIn = roomSearchInfoRequestDto.getCheckIn();
-		LocalDate checkOut = roomSearchInfoRequestDto.getCheckOut();
-		Long guestCount = roomSearchInfoRequestDto.getGuestCount();
-		Long kidCount = roomSearchInfoRequestDto.getKidCount();
-		Long minimumPrice = roomSearchInfoRequestDto.getMinimumPrice();
-		Long maximumPrice = roomSearchInfoRequestDto.getMaximumPrice();
-
-		return new RoomSimpleInfoResponseDto(checkIn, checkOut, guestCount, kidCount, minimumPrice,
-			maximumPrice, roomSimpleInfoDtos);
+		return new RoomSimpleInfoResponseDto(
+			roomSearchInfoRequestDto.getCheckIn(),
+			roomSearchInfoRequestDto.getCheckOut(),
+			roomSearchInfoRequestDto.getGuestCount(),
+			roomSearchInfoRequestDto.getKidCount(),
+			roomSearchInfoRequestDto.getMinimumPrice(),
+			roomSearchInfoRequestDto.getMaximumPrice(),
+			roomSimpleInfoDtos);
 	}
 }
