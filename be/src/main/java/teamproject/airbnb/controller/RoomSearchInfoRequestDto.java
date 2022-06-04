@@ -15,7 +15,7 @@ public class RoomSearchInfoRequestDto {
 	private LocalDate checkOut;
 	private Long minimumPrice;
 	private Long maximumPrice;
-	private Long guestCount;
-	private Long kidCount;
+	private Integer guestCount;
+	private Integer kidCount;
 	private List<Long> wishList;
 }

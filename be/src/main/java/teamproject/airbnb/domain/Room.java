@@ -49,7 +49,7 @@ public class Room {
 	private Long maximumRoomCount;
 	private Long remainingRoomCount;
 	private Long reviewNumber;
-	private Long discount;
+	private Integer discount;
 	private Long cleaningFee;
 	private Long serviceCharge;
 	private Long lodgingTax;

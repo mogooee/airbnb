@@ -13,8 +13,8 @@ public class RoomSimpleInfoResponseDto {
 
 	private LocalDate checkIn;
 	private LocalDate checkOut;
-	private Long guestCount;
-	private Long kidCount;
+	private Integer guestCount;
+	private Integer kidCount;
 	private Long minimumPrice;
 	private Long maximumPrice;
 	private List<RoomSimpleInfoDto> roomSimpleInfoDtos = new ArrayList<>();

@@ -44,8 +44,8 @@ public class RoomController {
 		@RequestParam(name = "checkOut") LocalDate checkOut,
 		@RequestParam(name = "minimum") Long minimumPrice,
 		@RequestParam(name = "maximum") Long maximumPrice,
-		@RequestParam(name = "guest") Long guestCount,
-		@RequestParam(name = "kid") Long kidCount,
+		@RequestParam(name = "guest") Integer guestCount,
+		@RequestParam(name = "kid") Integer kidCount,
 		@RequestParam(name = "checkIn") List<Long> wishList) {
 
 		RoomSearchInfoRequestDto requestDto = new RoomSearchInfoRequestDto(checkIn, checkOut,
