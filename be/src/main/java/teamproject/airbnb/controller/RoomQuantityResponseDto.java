@@ -9,19 +9,17 @@ import teamproject.airbnb.service.RoomQuantityDto;
 @AllArgsConstructor
 public class RoomQuantityResponseDto {
 
-	private String minimumFormat;
-	private String maximumFormat;
-	private String averageFormat;
+	private Long minimumPrice;
+	private Long maximumPrice;
 	private List<Long> priceRange;
 	private List<Long> roomQuantity;
 
 	public static RoomQuantityResponseDto from(RoomQuantityDto roomQuantityDto) {
 
-		String minimumFormat = roomQuantityDto.getMinimumPriceFormat();
-		String maximumFormat = roomQuantityDto.getMaximumPriceFormat();
-		String averageFormat = roomQuantityDto.getAveragePriceFormat();
-
-		return new RoomQuantityResponseDto(minimumFormat, maximumFormat, averageFormat,
-			roomQuantityDto.getPriceRange(), roomQuantityDto.getRoomQuantity());
+		return new RoomQuantityResponseDto(
+			roomQuantityDto.getMinimumPrice(),
+			roomQuantityDto.getMaximumPrice(),
+			roomQuantityDto.getPriceRange(),
+			roomQuantityDto.getRoomQuantity());
 	}
 }

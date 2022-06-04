@@ -22,7 +22,7 @@ public class RoomSimpleInfoDto {
 	private Long totalPrice;
 	private Boolean isBookmark;
 
-	public static RoomSimpleInfoDto from(Room room, LocalDate checkIn, LocalDate checkOut, List<Long> wishList) {
+	public static RoomSimpleInfoDto of(Room room, LocalDate checkIn, LocalDate checkOut, List<Long> wishList) {
 
 		Long averageRating =
 			room.getReviews().stream().mapToLong(Review::getRating).sum() / room.getReviews()

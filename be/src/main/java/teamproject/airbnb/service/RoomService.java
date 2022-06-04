@@ -29,19 +29,20 @@ public class RoomService {
 	public List<RoomSimpleInfoDto> loadSimpleInfoList(
 		RoomSearchInfoRequestDto roomSearchInfoRequestDto) {
 
-		LocalDate checkIn = roomSearchInfoRequestDto.getCheckIn();
-		LocalDate checkOut = roomSearchInfoRequestDto.getCheckOut();
-		Long minimumPrice = roomSearchInfoRequestDto.getMinimumPrice();
-		Long maximumPrice = roomSearchInfoRequestDto.getMaximumPrice();
-		List<Long> wishList = roomSearchInfoRequestDto.getWishList();
-
 		// 체크인으로 저장소에서 가져온 객체들을
 		// 요금 간격에서 한번 더 거르고,
 		// 주어진 정보로 값을 계산해서 dto 에 넘겨준다
 		return roomRepository.findAll().stream()
-			.filter(r -> r.isReservationAvailable(checkIn))
-			.filter(r -> r.checkPrice(minimumPrice, maximumPrice))
-			.map(r -> RoomSimpleInfoDto.from(r, checkIn, checkOut, wishList))
+			.filter(r -> r.isReservationAvailable(
+				roomSearchInfoRequestDto.getCheckIn()))
+			.filter(r -> r.fallWithinPriceRange(
+				roomSearchInfoRequestDto.getMinimumPrice(),
+				roomSearchInfoRequestDto.getMaximumPrice()))
+			.map(r -> RoomSimpleInfoDto.of(
+				r,
+				roomSearchInfoRequestDto.getCheckIn(),
+				roomSearchInfoRequestDto.getCheckOut(),
+				roomSearchInfoRequestDto.getWishList()))
 			.collect(Collectors.toList());
 	}
 }

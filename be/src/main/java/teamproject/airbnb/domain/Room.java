@@ -65,8 +65,8 @@ public class Room {
 			.anyMatch(r -> r.getCheckOut().isBefore(checkIn));
 	}
 
-	public Boolean checkPrice(Long minimumPrice, Long maximumPrice) {
-		return (this.price >= minimumPrice) && (this.price <= maximumPrice);
+	public Boolean fallWithinPriceRange(Long minimumPrice, Long maximumPrice) {
+		return (minimumPrice <= this.price) && (this.price <= maximumPrice);
 	}
 
 	// TODO 방 입주

@@ -51,22 +51,10 @@ public class RoomQuantityDto {
 			}
 		}
 
-		return new RoomQuantityDto(minimumPrice, maximumPrice, Arrays.stream(priceRange).toList(),
+		return new RoomQuantityDto(
+			minimumPrice,
+			maximumPrice,
+			Arrays.stream(priceRange).toList(),
 			Arrays.stream(roomQuantity).toList());
-	}
-
-	public String getMinimumPriceFormat() {
-		return this.getMinimumPrice().toString()
-			.replaceAll("\\B(?=(\\d{3})+(?!\\d))", ",");
-	}
-
-	public String getMaximumPriceFormat() {
-		return this.getMaximumPrice().toString()
-			.replaceAll("\\B(?=(\\d{3})+(?!\\d))", ",");
-	}
-
-	public String getAveragePriceFormat() {
-		Long averagePrice = (this.getMinimumPrice() + this.getMaximumPrice()) / 2;
-		return averagePrice.toString().replaceAll("\\B(?=(\\d{3})+(?!\\d))", ",");
 	}
 }
