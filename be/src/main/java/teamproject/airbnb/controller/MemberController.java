@@ -1,4 +1,4 @@
-package teamproject.airbnb.api;
+package teamproject.airbnb.controller;
 
 import javax.validation.Valid;
 import lombok.AllArgsConstructor;

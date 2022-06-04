@@ -49,7 +49,7 @@ public class Room {
 	private Long maximumRoomCount;
 	private Long remainingRoomCount;
 	private Long reviewNumber;
-	private Long discount;
+	private Integer discount;
 	private Long cleaningFee;
 	private Long serviceCharge;
 	private Long lodgingTax;
@@ -65,8 +65,8 @@ public class Room {
 			.anyMatch(r -> r.getCheckOut().isBefore(checkIn));
 	}
 
-	public Boolean checkPrice(Long minimumPrice, Long maximumPrice) {
-		return (this.price >= minimumPrice) && (this.price <= maximumPrice);
+	public Boolean fallWithinPriceRange(Long minimumPrice, Long maximumPrice) {
+		return (minimumPrice <= this.price) && (this.price <= maximumPrice);
 	}
 
 	// TODO 방 입주

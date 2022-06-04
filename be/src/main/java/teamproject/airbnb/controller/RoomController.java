@@ -1,20 +1,18 @@
-package teamproject.airbnb.api;
+package teamproject.airbnb.controller;
 
 import java.time.LocalDate;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import teamproject.airbnb.api.dto.RoomQuantityResponseDto;
-import teamproject.airbnb.api.dto.RoomSimpleInfoResponseDto;
 import teamproject.airbnb.service.RoomService;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/room")
+@RequestMapping("/rooms")
 public class RoomController {
 
 	private final RoomService roomService;
@@ -33,12 +31,29 @@ public class RoomController {
 	//1-3) 검색 바: request: 숙소 개수,체크인,체크아웃,요금 최소값,요금 최대값,게스트 수,어린이 수
 	/// response: 숙소 개수,체크인,체크아웃,요금 최소값,요금 최대값,게스트 수,어린이 수
 	//, (배열)roomDto{id,숙소이름,숙소설명,가구설명,평균평점,후기건수,가격,총액,찜 여부,주소,좌표}
-	@PostMapping("/search")
+//	@GetMapping("/search")
+//	public RoomSimpleInfoResponseDto loadInfoList(
+//		@RequestBody RequestRoomSearchInfo requestRoomSearchInfo) {
+//
+//		return RoomSimpleInfoResponseDto.from(roomService.loadSimpleInfoList(requestRoomSearchInfo),
+//			requestRoomSearchInfo);
+//	}
+	@GetMapping("/search")
 	public RoomSimpleInfoResponseDto loadInfoList(
-		@RequestBody RequestRoomSearchInfo requestRoomSearchInfo) {
+		@RequestParam(name = "checkIn") LocalDate checkIn,
+		@RequestParam(name = "checkOut") LocalDate checkOut,
+		@RequestParam(name = "minimum") Long minimumPrice,
+		@RequestParam(name = "maximum") Long maximumPrice,
+		@RequestParam(name = "guest") Integer guestCount,
+		@RequestParam(name = "kid") Integer kidCount,
+		@RequestParam(name = "checkIn") List<Long> wishList) {
 
-		return RoomSimpleInfoResponseDto.from(roomService.loadSimpleInfoList(requestRoomSearchInfo),
-			requestRoomSearchInfo);
+		RoomSearchInfoRequestDto requestDto = new RoomSearchInfoRequestDto(checkIn, checkOut,
+			minimumPrice, maximumPrice, guestCount, kidCount, wishList);
+
+		return RoomSimpleInfoResponseDto.of(roomService.loadSimpleInfoList(
+				requestDto),
+			requestDto);
 	}
 
 }
