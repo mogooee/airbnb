@@ -6,10 +6,8 @@ import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import teamproject.airbnb.api.RequestRoomSearchInfo;
+import teamproject.airbnb.controller.RequestRoomSearchInfo;
 import teamproject.airbnb.repository.RoomRepository;
-import teamproject.airbnb.service.dto.RoomQuantityDto;
-import teamproject.airbnb.service.dto.RoomSimpleInfoDto;
 
 @Service
 @Transactional(readOnly = true)

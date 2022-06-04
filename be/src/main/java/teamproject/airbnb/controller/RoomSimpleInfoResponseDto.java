@@ -1,12 +1,11 @@
-package teamproject.airbnb.api.dto;
+package teamproject.airbnb.controller;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import teamproject.airbnb.api.RequestRoomSearchInfo;
-import teamproject.airbnb.service.dto.RoomSimpleInfoDto;
+import teamproject.airbnb.service.RoomSimpleInfoDto;
 
 @Data
 @AllArgsConstructor

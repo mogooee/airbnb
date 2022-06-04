@@ -1,4 +1,4 @@
-package teamproject.airbnb.service.dto;
+package teamproject.airbnb.service;
 
 import java.time.LocalDate;
 import java.time.Period;

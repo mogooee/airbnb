@@ -1,4 +1,4 @@
-package teamproject.airbnb.api;
+package teamproject.airbnb.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -17,6 +17,6 @@ public class RequestRoomSearchInfo {
 	private Long guestCount;
 	private Long kidCount;
 	private List<Long> wishList;
-	LocalDate checkIn;
-	LocalDate checkOut;
+	private LocalDate checkIn;
+	private LocalDate checkOut;
 }

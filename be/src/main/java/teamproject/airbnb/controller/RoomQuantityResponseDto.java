@@ -1,9 +1,9 @@
-package teamproject.airbnb.api.dto;
+package teamproject.airbnb.controller;
 
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import teamproject.airbnb.service.dto.RoomQuantityDto;
+import teamproject.airbnb.service.RoomQuantityDto;
 
 @Data
 @AllArgsConstructor
