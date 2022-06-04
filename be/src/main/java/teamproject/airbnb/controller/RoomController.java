@@ -12,7 +12,7 @@ import teamproject.airbnb.service.RoomService;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/room")
+@RequestMapping("/rooms")
 public class RoomController {
 
 	private final RoomService roomService;
