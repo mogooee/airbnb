@@ -11,15 +11,13 @@ public class RoomQuantityResponseDto {
 
 	private Long minimumPrice;
 	private Long maximumPrice;
-	private List<Long> priceRange;
-	private List<Long> roomQuantity;
+	private List<Long> priceList;
 
 	public static RoomQuantityResponseDto from(RoomQuantityDto roomQuantityDto) {
 
 		return new RoomQuantityResponseDto(
 			roomQuantityDto.getMinimumPrice(),
 			roomQuantityDto.getMaximumPrice(),
-			roomQuantityDto.getPriceRange(),
-			roomQuantityDto.getRoomQuantity());
+			roomQuantityDto.getPriceList());
 	}
 }
