@@ -41,8 +41,7 @@ public class RoomService {
 			.map(r -> RoomSimpleInfoDto.of(
 				r,
 				roomSearchInfoRequestDto.getCheckIn(),
-				roomSearchInfoRequestDto.getCheckOut(),
-				roomSearchInfoRequestDto.getWishList()))
+				roomSearchInfoRequestDto.getCheckOut()))
 			.collect(Collectors.toList());
 	}
 }

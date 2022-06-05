@@ -16,17 +16,15 @@ public class RoomSimpleInfoDto {
 	private String address;
 	private String description;
 	private String furnitureDescription;
-	private Integer averageRating;
-	private Long reviewNumber;
-	private Long price;
-	private Long totalPrice;
-	private Boolean isBookmark;
+	private double averageRating;
+	private long reviewNumber;
+	private long price;
+	private long totalPrice;
 
-	public static RoomSimpleInfoDto of(Room room, LocalDate checkIn, LocalDate checkOut,
-		List<Long> wishList) {
+	public static RoomSimpleInfoDto of(Room room, LocalDate checkIn, LocalDate checkOut) {
 
-		Integer averageRating =
-			room.getReviews().stream().mapToInt(Review::getRating).sum() / room.getReviews()
+		double averageRating =
+			room.getReviews().stream().mapToDouble(Review::getRating).sum() / room.getReviews()
 				.size();
 
 		Period period = Period.between(checkIn, checkOut);
@@ -38,9 +36,8 @@ public class RoomSimpleInfoDto {
 			room.getDescription(),
 			room.getFurnitureDescription(),
 			averageRating,
-			Long.valueOf(room.getReviews().size()),
+			(long) room.getReviews().size(),
 			room.getPrice(),
-			totalPrice,
-			wishList.contains(room.getId()));
+			totalPrice);
 	}
 }

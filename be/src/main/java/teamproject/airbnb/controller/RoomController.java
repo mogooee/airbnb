@@ -45,11 +45,10 @@ public class RoomController {
 		@RequestParam(name = "minimum") Long minimumPrice,
 		@RequestParam(name = "maximum") Long maximumPrice,
 		@RequestParam(name = "guest") Integer guestCount,
-		@RequestParam(name = "kid") Integer kidCount,
-		@RequestParam(name = "checkIn") List<Long> wishList) {
+		@RequestParam(name = "kid") Integer kidCount) {
 
 		RoomSearchInfoRequestDto requestDto = new RoomSearchInfoRequestDto(checkIn, checkOut,
-			minimumPrice, maximumPrice, guestCount, kidCount, wishList);
+			minimumPrice, maximumPrice, guestCount, kidCount);
 
 		return RoomSimpleInfoResponseDto.of(roomService.loadSimpleInfoList(
 				requestDto),

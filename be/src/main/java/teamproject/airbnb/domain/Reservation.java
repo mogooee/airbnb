@@ -30,9 +30,9 @@ public class Reservation {
 	private LocalDate checkIn;
 	private LocalDate checkOut;
 	private String hostName;
-	private Long guest;
-	private Long kid;
-	private Long payment;
+	private int guest;
+	private int kid;
+	private long payment;
 
 	// TODO
 	public Boolean isExist(LocalDate checkIn, LocalDate checkOut) {
