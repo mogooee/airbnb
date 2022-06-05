@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import ModalPortal from 'Portal';
+import Personnel from 'components/Modal/Personnel/Personnel';
+import { useAddSearch, useSearch } from 'context/SearchProvider';
 
 const BackGround = styled.div`
   position: fixed;
@@ -16,8 +18,9 @@ const BackGround = styled.div`
 `;
 
 const ModalBlock = styled.div<{ position: number }>`
-  width: 320px;
-  height: 300px;
+  width: 400px;
+  height: 355px;
+  padding: 55px;
   position: absolute;
   top: 200px;
   border-radius: 60px;
@@ -25,21 +28,25 @@ const ModalBlock = styled.div<{ position: number }>`
 `;
 
 export default function Modal({
-  children,
   shown,
   onClose,
+  content,
 }: {
-  children: React.ReactNode;
   shown: boolean;
   onClose: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  content: string;
 }) {
   const blockEvent = (event: React.MouseEvent<HTMLButtonElement>) => event.stopPropagation();
+  const search = useSearch();
+  const addSearch = useAddSearch();
 
   return (
     <ModalPortal>
       {shown && (
         <BackGround role="button" tabIndex={0} className="ModalBackGround" onClick={onClose} onKeyDown={onClose}>
-          <ModalBlock onClick={blockEvent}>{children}</ModalBlock>
+          <ModalBlock onClick={blockEvent}>
+            {content === 'personnel' && <Personnel search={search.personnel} addSearch={addSearch} />}
+          </ModalBlock>
         </BackGround>
       )}
     </ModalPortal>
