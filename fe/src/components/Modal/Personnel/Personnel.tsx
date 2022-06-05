@@ -46,13 +46,13 @@ const PersonnelController = styled.div`
 
 const MinusButton = styled.button`
   path {
-    ${({ count }) => !count && `stroke: #e0e0e0;`}
+    ${({ count, min }) => (count || 0) === min && `stroke: #e0e0e0;`}
   }
 `;
 
 const PlusButton = styled.button`
   path {
-    ${({ count }) => count >= 10 && `stroke: #e0e0e0;`}
+    ${({ count, max }) => count === max && `stroke: #e0e0e0;`}
   }
 `;
 
@@ -65,7 +65,6 @@ const SplitLine = styled.div`
 
 export default function Personnel({ search, addSearch }: ModalProps<PersonnelType>) {
   const titleArray = Object.keys(search);
-  const maxNum = 10;
   const handlePersonnel = (e: string, type: string) => {
     const current = search[e] || 0;
     const surplus = type === 'increment' ? +1 : -1;
@@ -87,7 +86,8 @@ export default function Personnel({ search, addSearch }: ModalProps<PersonnelTyp
             <PersonnelController count={search[e]}>
               <MinusButton
                 count={search[e]}
-                disabled={!search[e] && 'disabled'}
+                min={info.personnel.range.min}
+                disabled={search[e] === info.personnel.range.min && 'disabled'}
                 onClick={() => handlePersonnel(e, 'decrement')}
               >
                 <MinusIcon />
@@ -95,7 +95,8 @@ export default function Personnel({ search, addSearch }: ModalProps<PersonnelTyp
               <p>{search[e] || 0}</p>
               <PlusButton
                 count={search[e]}
-                disabled={search[e] >= maxNum && 'disabled'}
+                max={info.personnel.range.max}
+                disabled={search[e] === info.personnel.range.max && 'disabled'}
                 onClick={() => handlePersonnel(e, 'increment')}
               >
                 <PlusIcon />

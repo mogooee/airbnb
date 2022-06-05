@@ -10,6 +10,10 @@ export default {
   personnel: {
     title: '인원',
     defaultValue: '게스트 추가',
+    range: {
+      min: 0,
+      max: 10,
+    },
     value: {
       adult: {
         title: '성인',
