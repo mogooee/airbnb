@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
-import { ActiveContext, useContentModal } from 'context/ModalProvider';
+import { useContentModal, ActiveContext } from 'context/ModalProvider';
 import styled from 'styled-components';
-import { Button } from '@mui/material';
-import { ReactComponent as SearchIcon } from 'img/svg/search-icon.svg';
-import { ReactComponent as SearchTextIcon } from 'img/svg/search-text-icon.svg';
 
 import StyledSearchBar from 'components/SearchBar/SearchBar.styled';
 import Period from 'components/SearchBar/Period/Period';
 import Price from 'components/SearchBar/Price/Price';
 import Personnel from 'components/SearchBar/Personnel/Personnel';
 import SearchList from 'components/SearchBar/SearchList/SearchList';
+
+import { Button } from '@mui/material';
+import { ReactComponent as SearchIcon } from 'img/svg/search-icon.svg';
+import { ReactComponent as SearchTextIcon } from 'img/svg/search-text-icon.svg';
 
 const SplitLine = styled.div`
   width: 1px;

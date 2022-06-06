@@ -1,16 +1,15 @@
 import React from 'react';
-import SearchSection from 'components/SearchBar/SearchSection/SearchSection';
-import { SectionProps } from 'components/SearchBar/types';
+import SearchSection from 'components/common/Section';
+import { PeriodType, SectionProps } from 'components/SearchBar/types';
 
-export default function Period({ search, addSearch }: SectionProps) {
-  const { title, defaultValue, value } = search;
-  const [checkInTitle, checkOutTitle] = title as string[];
-  const { checkIn, checkOut } = value;
+export default function Period({ info, search }: SectionProps<PeriodType>) {
+  const { checkIn, checkOut } = search;
+  const [checkInTitle, checkOutTitle] = info.title;
 
   return (
     <>
-      <SearchSection title={checkInTitle as string} value={checkIn || defaultValue} />
-      <SearchSection title={checkOutTitle as string} value={checkOut || defaultValue} />
+      <SearchSection title={checkInTitle} value={checkIn || info.defaultValue} />
+      <SearchSection title={checkOutTitle} value={checkOut || info.defaultValue} />
     </>
   );
 }

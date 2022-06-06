@@ -4,7 +4,7 @@ import { ReactComponent as DeleteIcon } from 'img/svg/delete.svg';
 
 export default function DeleteButton({ initValue }: { initValue: () => void }) {
   return (
-    <Button style={{ backgroundColor: 'transparent' }} onClick={initValue}>
+    <Button style={{ backgroundColor: 'transparent', minWidth: '50px' }} onClick={initValue}>
       <DeleteIcon />
     </Button>
   );

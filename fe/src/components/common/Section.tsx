@@ -5,7 +5,7 @@ interface SectionType {
   value: string | number;
 }
 
-export default function SearchSection(section: SectionType) {
+export default function Section(section: SectionType) {
   const { title, value } = section;
 
   return (
