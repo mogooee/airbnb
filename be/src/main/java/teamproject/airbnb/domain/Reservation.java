@@ -34,6 +34,10 @@ public class Reservation {
 	private int kid;
 	private long payment;
 
+	public boolean isSameMemberId(int memberId) {
+		return member.isSameId(memberId);
+	}
+
 	// TODO
 	public Boolean isExist(LocalDate checkIn, LocalDate checkOut) {
 

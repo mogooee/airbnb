@@ -17,4 +17,5 @@ public class RoomSearchInfoRequestDto {
 	private long maximumPrice;
 	private int guestCount;
 	private int kidCount;
+	private int memberId;
 }
