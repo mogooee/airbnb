@@ -90,6 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E430BD5A284F4D2D00BA766A /* HomeTabScene */ = {
+			isa = PBXGroup;
+			children = (
+				E430BD5F284F4DC300BA766A /* HomeTabFlowCoordinator.swift */,
+				E4BE2A43283DFC46000099E5 /* Home */,
+				E4F11DAB283F5F030035CBC2 /* Search */,
+			);
+			path = HomeTabScene;
+			sourceTree = "<group>";
+		};
+		E430BD5C284F4D7100BA766A /* ReservationTabScene */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE2A45283DFD28000099E5 /* Reservation */,
+			);
+			path = ReservationTabScene;
+			sourceTree = "<group>";
+		};
 		E4409DC7283B2A0E005C6BA1 = {
 			isa = PBXGroup;
 			children = (
@@ -210,21 +228,20 @@
 		E4BE2A40283DFBA3000099E5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				E4BE2A41283DFBAB000099E5 /* Scenes */,
+				E430BD5A284F4D2D00BA766A /* HomeTabScene */,
+				E4BE2A41283DFBAB000099E5 /* WishTabScene */,
+				E430BD5C284F4D7100BA766A /* ReservationTabScene */,
 				E4BE2A42283DFBFF000099E5 /* Utils */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		E4BE2A41283DFBAB000099E5 /* Scenes */ = {
+		E4BE2A41283DFBAB000099E5 /* WishTabScene */ = {
 			isa = PBXGroup;
 			children = (
-				E4F11DAB283F5F030035CBC2 /* Search */,
-				E4BE2A43283DFC46000099E5 /* Home */,
 				E4BE2A44283DFD1F000099E5 /* WishList */,
-				E4BE2A45283DFD28000099E5 /* Reservation */,
 			);
-			path = Scenes;
+			path = WishTabScene;
 			sourceTree = "<group>";
 		};
 		E4BE2A42283DFBFF000099E5 /* Utils */ = {

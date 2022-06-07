@@ -39,9 +39,9 @@ struct DefaultHomeViewModel: HomeViewModel {
   var action: HomeViewModelAction { self }
   var state: HomeViewModelState { self }
 
-  var bannerImage = Observable(value: imageUrl)
-
   private let sectionTitles = ["", "가까운 여행지 둘러보기", "어디에서나, 여행은\n살아보는거야!"]
+
+  var bannerImage = Observable(value: imageUrl)
 
   var cities = Observable(value: [
     City(id: 1, name: "서울", distance: "차로 30분 거리", imageUrl: imageUrl),
@@ -61,16 +61,22 @@ struct DefaultHomeViewModel: HomeViewModel {
     Accommodation(id: 6, description: "자연생활을 만끽할 수 있는 숙소", imageUrl: imageUrl)
   ])
 
-  func getSectionTitle(at index: Int) -> String {
-    sectionTitles[index]
+  private let fetchImageUseCase: FetchImageUseCase
+
+  init(fetchImageUseCase: FetchImageUseCase) {
+    self.fetchImageUseCase = fetchImageUseCase
   }
 
-  func getBanngerImage() -> String {
-    bannerImage.value
+  func getSectionTitle(at index: Int) -> String {
+    sectionTitles[index]
   }
 }
 
 extension HomeViewModel {
+  func getBanngerImage() -> String {
+    bannerImage.value
+  }
+
   func getNearCityList() {}
 
   func getRecommendationList() {}
