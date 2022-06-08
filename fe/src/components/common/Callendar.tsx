@@ -2,12 +2,13 @@ import React, { Dispatch, useState } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as LeftIcon } from 'img/svg/left.svg';
 import { ReactComponent as RightIcon } from 'img/svg/right.svg';
+import { addSearchType } from 'components/SearchBar/types';
 
 interface CallendarType {
   callendarNum: number;
   checkIn: number;
   checkOut: number;
-  addSearch: Dispatch<any>;
+  addSearch: Dispatch<addSearchType>;
 }
 
 const CallendarTitle = styled.h1`
