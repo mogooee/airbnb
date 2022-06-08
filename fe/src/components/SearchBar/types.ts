@@ -1,8 +1,8 @@
 import { Dispatch } from 'react';
 
 export type PeriodType = {
-  checkIn?: number;
-  checkOut?: number;
+  checkIn?: string;
+  checkOut?: string;
 };
 
 export type PriceType = {

@@ -5,11 +5,19 @@ import { PeriodType, SectionProps } from 'components/SearchBar/types';
 export default function Period({ info, search }: SectionProps<PeriodType>) {
   const { checkIn, checkOut } = search;
   const [checkInTitle, checkOutTitle] = info.title;
+  const getMonth = (date: string): number => Number(date.slice(-4, -2));
+  const getDay = (date: string): number => Number(date.slice(-2));
 
   return (
     <>
-      <SearchSection title={checkInTitle} value={checkIn || info.defaultValue} />
-      <SearchSection title={checkOutTitle} value={checkOut || info.defaultValue} />
+      <SearchSection
+        title={checkInTitle}
+        value={checkIn ? `${getMonth(checkIn)}월 ${getDay(checkIn)}일` : info.defaultValue}
+      />
+      <SearchSection
+        title={checkOutTitle}
+        value={checkOut ? `${getMonth(checkOut)}월 ${getDay(checkOut)}일` : info.defaultValue}
+      />
     </>
   );
 }
