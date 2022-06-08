@@ -6,6 +6,12 @@ import { ReactComponent as MinusIcon } from 'img/svg/minus-circle.svg';
 import { ReactComponent as PlusIcon } from 'img/svg/plus-circle.svg';
 import info from 'helpers/constant';
 
+const StyledPersonnel = styled.div`
+  & + & {
+    margin-top: 24px;
+  }
+`;
+
 const StyledSection = styled.div`
   display: flex;
 
@@ -60,7 +66,7 @@ const SplitLine = styled.div`
   width: 272px;
   height: 1px;
   background: #e0e0e0;
-  margin: 24px 0px;
+  margin-top: 24px;
 `;
 
 export default function Personnel({ search, addSearch }: ModalProps<PersonnelType>) {
@@ -69,7 +75,7 @@ export default function Personnel({ search, addSearch }: ModalProps<PersonnelTyp
     const current = search[e] || 0;
     const surplus = type === 'increment' ? +1 : -1;
     const value = { [e]: current + surplus };
-    const needProtector = e !== 'adult' && !search.adult;
+    const needProtector = type === 'increment' && e !== 'adult' && !search.adult;
 
     addSearch({
       type: 'SET_PERSONNEL',
@@ -80,14 +86,14 @@ export default function Personnel({ search, addSearch }: ModalProps<PersonnelTyp
   return (
     <>
       {titleArray.map((e) => (
-        <div key={e}>
+        <StyledPersonnel key={e}>
           <StyledSection>
             <Section title={info.personnel.value[e].title} value={info.personnel.value[e].description || 0} />
             <PersonnelController count={search[e]}>
               <MinusButton
                 count={search[e]}
                 min={info.personnel.range.min}
-                disabled={search[e] === info.personnel.range.min && 'disabled'}
+                disabled={Number(search[e]) === info.personnel.range.min && 'disabled'}
                 onClick={() => handlePersonnel(e, 'decrement')}
               >
                 <MinusIcon />
@@ -96,7 +102,7 @@ export default function Personnel({ search, addSearch }: ModalProps<PersonnelTyp
               <PlusButton
                 count={search[e]}
                 max={info.personnel.range.max}
-                disabled={search[e] === info.personnel.range.max && 'disabled'}
+                disabled={Number(search[e]) === info.personnel.range.max && 'disabled'}
                 onClick={() => handlePersonnel(e, 'increment')}
               >
                 <PlusIcon />
@@ -104,7 +110,7 @@ export default function Personnel({ search, addSearch }: ModalProps<PersonnelTyp
             </PersonnelController>
           </StyledSection>
           <SplitLine />
-        </div>
+        </StyledPersonnel>
       ))}
     </>
   );
