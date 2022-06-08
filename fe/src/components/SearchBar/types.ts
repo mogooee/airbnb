@@ -30,21 +30,21 @@ export type SearchType = {
 
 export type addSearchType =
   | {
-    type: 'SET_PERIOD';
-    value: PeriodType;
-  }
+      type: 'SET_PERIOD';
+      value: PeriodType;
+    }
   | {
-    type: 'SET_PRICE';
-    value: PriceType;
-  }
+      type: 'SET_PRICE';
+      value: PriceType;
+    }
   | {
-    type: 'SET_PERSONNEL';
-    value: PersonnelType;
-  }
+      type: 'SET_PERSONNEL';
+      value: PersonnelType;
+    }
   | {
-    type: 'INIT_VALUE';
-    value: string;
-  };
+      type: 'INIT_VALUE';
+      value: string;
+    };
 export interface ModalProps<T> {
   search: T;
   addSearch: Dispatch<addSearchType>;
