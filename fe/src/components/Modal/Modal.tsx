@@ -35,10 +35,10 @@ export default function Modal({
   content,
 }: {
   shown: boolean;
-  onClose: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClose: (event: { stopPropagation: () => void }) => void;
   content: string;
 }): JSX.Element {
-  const blockEvent = (event: React.MouseEvent<HTMLButtonElement>) => event.stopPropagation();
+  const blockEvent = (event: { stopPropagation: () => void }) => event.stopPropagation();
   const search = useSearch();
   const addSearch = useAddSearch();
 

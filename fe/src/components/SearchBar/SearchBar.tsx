@@ -50,7 +50,7 @@ export default function SearchBar() {
   const setActiveModal = useSetActiveModal();
   const setContent = useSetContentModal();
 
-  const handleModalOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleModalOpen = (event: { currentTarget: { id: string } }) => {
     const searchListId = event.currentTarget.id;
     setActiveModal(true);
     setContent(searchListId);

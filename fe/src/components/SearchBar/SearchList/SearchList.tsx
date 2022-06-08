@@ -27,7 +27,7 @@ export default function SearchList({
   const content = useContentModal();
   const setContent = useSetContentModal();
 
-  const handleModalClose = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleModalClose = (event: { stopPropagation: () => void }) => {
     setActiveModal(false);
     setContent('');
     event.stopPropagation();
