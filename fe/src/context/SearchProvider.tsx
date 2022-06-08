@@ -38,8 +38,7 @@ function searchReducer(searches: SearchType, action: ActionType): SearchType {
         ...searches,
         period: {
           ...searches.period,
-          checkIn: value.checkIn,
-          checkOut: value.checkOut,
+          ...value,
         },
       };
     case 'SET_PRICE':
