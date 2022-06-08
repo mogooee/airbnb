@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchSection from 'components/common/Section';
+import SearchSection from 'components/common/Section/Section';
 import { PersonnelType, SectionProps } from 'components/SearchBar/types';
 
 export default function Personnel({ info, search }: SectionProps<PersonnelType>): JSX.Element {

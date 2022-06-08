@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchSection from 'components/common/Section';
+import SearchSection from 'components/common/Section/Section';
 import { PeriodType, SectionProps } from 'components/SearchBar/types';
 
 export default function Period({ info, search }: SectionProps<PeriodType>): JSX.Element {
