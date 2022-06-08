@@ -37,23 +37,24 @@ export default function SearchBar() {
     { id: 'personnel', element: Personnel, width: 298 },
   ];
 
-  const searchList = searchListArray.map(
-    ({ id, element, width }): JSX.Element => (
-      <>
-        <StyledLi
-          key={`styledLi-${id}`}
-          role="button"
-          tabIndex={0}
-          onClick={handleModalOpen}
-          id={id}
-          isActive={isCurrentActive(id)}
-          width={width}
-        >
-          <SearchList key={`searchList-${id}`} Element={element} id={id} />
-          {id === 'personnel' && <SearchButton key={`searchButton-${id}`} />}
-        </StyledLi>
-        {id !== 'personnel' && <SplitLine key={`splitLine-${id}`} />}
-      </>
+  const searchList = React.Children.toArray(
+    searchListArray.map(
+      ({ id, element, width }): JSX.Element => (
+        <>
+          <StyledLi
+            role="button"
+            tabIndex={0}
+            onClick={handleModalOpen}
+            id={id}
+            isActive={isCurrentActive(id)}
+            width={width}
+          >
+            <SearchList Element={element} id={id} />
+            {id === 'personnel' && <SearchButton />}
+          </StyledLi>
+          {id !== 'personnel' && <SplitLine />}
+        </>
+      )
     )
   );
 

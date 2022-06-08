@@ -156,7 +156,9 @@ export default function Callendar({ callendarNum, checkIn, checkOut, addSearch }
           <tbody>
             <tr>{getDow()}</tr>
             {setdaysArray(callendarYear, callendarMonth).map((week, index) => (
-              <tr key={week[index]}>{week.map((day) => seperateDay(index, callendarYear, callendarMonth, day))}</tr>
+              <tr key={`week-${week[index]}`}>
+                {week.map((day) => seperateDay(index, callendarYear, callendarMonth, day))}
+              </tr>
             ))}
           </tbody>
         </StyledCallendar>
