@@ -69,7 +69,7 @@ const SplitLine = styled.div`
   margin-top: 24px;
 `;
 
-export default function Personnel({ search, addSearch }: ModalProps<PersonnelType>) {
+export default function Personnel({ search, addSearch }: ModalProps<PersonnelType>): JSX.Element {
   const titleArray = Object.keys(search);
   const handlePersonnel = (e: string, type: string) => {
     const current = search[e] || 0;

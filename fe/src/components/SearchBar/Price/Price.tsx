@@ -2,7 +2,7 @@ import React from 'react';
 import SearchSection from 'components/common/Section';
 import { PriceType, SectionProps } from 'components/SearchBar/types';
 
-export default function Price({ info, search }: SectionProps<PriceType>) {
+export default function Price({ info, search }: SectionProps<PriceType>): JSX.Element {
   const { minPrice, maxPrice } = search;
   const price = minPrice || maxPrice ? `${minPrice}~${maxPrice}` : info.defaultValue;
 

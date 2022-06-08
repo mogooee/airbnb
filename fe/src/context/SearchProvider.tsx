@@ -80,7 +80,7 @@ const initSearch = {
   },
 };
 
-export function SearchProvider({ children }: { children: React.ReactNode }) {
+export function SearchProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [searches, addSearch] = useReducer(searchReducer, initSearch);
   return (
     <SearchContext.Provider value={searches}>

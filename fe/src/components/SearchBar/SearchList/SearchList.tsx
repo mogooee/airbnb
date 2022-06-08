@@ -14,7 +14,7 @@ export default function SearchList({
 }: {
   Element: React.ComponentType<SectionProps<any>>;
   id: string;
-}): React.ReactElement {
+}): JSX.Element {
   // 검색 필터 입력된 값
   const search = useSearch();
   const addSearch = useAddSearch();

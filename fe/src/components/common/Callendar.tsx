@@ -67,7 +67,7 @@ const getToday = () => {
   return [year, month, today];
 };
 
-export default function Callendar({ callendarNum, checkIn, checkOut, addSearch }: CallendarType) {
+export default function Callendar({ callendarNum, checkIn, checkOut, addSearch }: CallendarType): JSX.Element {
   const firstWeekMaxNum = 7;
   const [year, month, today] = getToday();
   const [currentMonth, setCurrentMonth] = useState(month);

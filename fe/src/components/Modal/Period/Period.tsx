@@ -28,7 +28,7 @@ const StyledCallendarModal = styled.div`
 
 `;
 
-export default function Period({ search, addSearch }: ModalProps<PeriodType>) {
+export default function Period({ search, addSearch }: ModalProps<PeriodType>): JSX.Element {
   const checkIn = Number(search.checkIn);
   const checkOut = Number(search.checkOut);
   const callendarNum = 2;
