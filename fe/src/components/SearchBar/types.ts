@@ -6,8 +6,8 @@ export type PeriodType = {
 };
 
 export type PriceType = {
-  minPrice?: number;
-  maxPrice?: number;
+  min?: number;
+  max?: number;
 };
 
 export type PersonnelType = {

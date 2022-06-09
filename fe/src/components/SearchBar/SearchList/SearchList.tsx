@@ -5,7 +5,6 @@ import DeleteButton from 'components/SearchBar/SearchList/DeleteButton';
 import Modal from 'components/Modal/Modal';
 import ModalPortal from 'Portal';
 import { PeriodType, PersonnelType, PriceType, SectionProps } from 'components/SearchBar/types';
-
 import info from 'helpers/constant';
 
 export default function SearchList({
