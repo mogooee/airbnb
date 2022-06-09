@@ -28,5 +28,6 @@ final class HomeSceneFlowCoordinator: Coordinator {
 
   func showSearchLocation() {
     let viewController = dependencies.makeLocationSearchViewController()
+		navigationController.pushViewController(viewController, animated: true)
   }
 }

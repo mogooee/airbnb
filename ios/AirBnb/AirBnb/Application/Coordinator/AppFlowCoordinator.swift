@@ -1,5 +1,5 @@
 //
-//  AppCoordinator.swift
+//  AppFlowCoordinator.swift
 //  AirBnb
 //
 //  Created by 송태환 on 2022/06/07.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator {
+final class AppFlowCoordinator: Coordinator {
   private let navigationController: UINavigationController
   private let appContainer: AppDIContainer
 

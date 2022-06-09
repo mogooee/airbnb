@@ -9,7 +9,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
-  var coordinator: AppCoordinator?
+  var coordinator: AppFlowCoordinator?
 
   func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
     guard let scene = (scene as? UIWindowScene) else {
@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
 
-    coordinator = AppCoordinator(navigationController: navigationController, container: AppDIContainer())
+    coordinator = AppFlowCoordinator(navigationController: navigationController, container: AppDIContainer())
     coordinator?.start()
   }
 }

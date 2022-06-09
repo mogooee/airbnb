@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E430BD56284F4BA100BA766A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430BD55284F4BA100BA766A /* AppCoordinator.swift */; };
+		E430BD56284F4BA100BA766A /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430BD55284F4BA100BA766A /* AppFlowCoordinator.swift */; };
 		E430BD58284F4C1B00BA766A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430BD57284F4C1B00BA766A /* AppDIContainer.swift */; };
 		E430BD60284F4DC300BA766A /* HomeSceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430BD5F284F4DC300BA766A /* HomeSceneFlowCoordinator.swift */; };
 		E43DA4B0284769BC004619CD /* FetchImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DA4AF284769BC004619CD /* FetchImageUseCase.swift */; };
@@ -53,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E430BD55284F4BA100BA766A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E430BD55284F4BA100BA766A /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		E430BD57284F4C1B00BA766A /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		E430BD5F284F4DC300BA766A /* HomeSceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneFlowCoordinator.swift; sourceTree = "<group>"; };
 		E43DA4AF284769BC004619CD /* FetchImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageUseCase.swift; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				E4AC38DE2851BEB00027A1E6 /* Coordinator.swift */,
-				E430BD55284F4BA100BA766A /* AppCoordinator.swift */,
+				E430BD55284F4BA100BA766A /* AppFlowCoordinator.swift */,
 				E4BBAEB928518D950066FB40 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -548,7 +548,7 @@
 				E430BD60284F4DC300BA766A /* HomeSceneFlowCoordinator.swift in Sources */,
 				E4E3C2AC28485E5500B5F7E1 /* DefaultImageCacheStorage.swift in Sources */,
 				E43DA4B0284769BC004619CD /* FetchImageUseCase.swift in Sources */,
-				E430BD56284F4BA100BA766A /* AppCoordinator.swift in Sources */,
+				E430BD56284F4BA100BA766A /* AppFlowCoordinator.swift in Sources */,
 				E4E3C2A7284855A200B5F7E1 /* ImageFactory.swift in Sources */,
 				E4AC38DF2851BEB00027A1E6 /* Coordinator.swift in Sources */,
 				E4BBAEBA28518D950066FB40 /* TabBarCoordinator.swift in Sources */,
