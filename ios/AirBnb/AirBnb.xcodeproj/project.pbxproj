@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E430BD56284F4BA100BA766A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430BD55284F4BA100BA766A /* AppCoordinator.swift */; };
 		E43DA4B0284769BC004619CD /* FetchImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DA4AF284769BC004619CD /* FetchImageUseCase.swift */; };
 		E4409DD4283B2A0E005C6BA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4409DD3283B2A0E005C6BA1 /* AppDelegate.swift */; };
 		E4409DD6283B2A0E005C6BA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4409DD5283B2A0E005C6BA1 /* SceneDelegate.swift */; };
@@ -227,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				E4AC38DE2851BEB00027A1E6 /* Coordinator.swift */,
+				E430BD55284F4BA100BA766A /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -495,6 +497,7 @@
 				E4583FB7284226BA00A095BB /* UIView+Extensions.swift in Sources */,
 				E4E3C2AC28485E5500B5F7E1 /* DefaultImageCacheStorage.swift in Sources */,
 				E43DA4B0284769BC004619CD /* FetchImageUseCase.swift in Sources */,
+				E430BD56284F4BA100BA766A /* AppCoordinator.swift in Sources */,
 				E4E3C2A7284855A200B5F7E1 /* ImageFactory.swift in Sources */,
 				E4AC38DF2851BEB00027A1E6 /* Coordinator.swift in Sources */,
 				E4E3C2B42848AC6200B5F7E1 /* NetworkService.swift in Sources */,
