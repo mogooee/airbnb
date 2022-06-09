@@ -23,8 +23,8 @@ final class HomeSceneDIContainer: DIContainer {
   }
 
   // MARK: - ViewModel
-  func makeHomeViewModel() -> HomeViewModel {
-    DefaultHomeViewModel(fetchImageUseCase: makeFetchImageUseCase())
+  func makeHomeViewModel(actions: DefaultHomeViewModel.DependencyActions) -> HomeViewModel {
+    DefaultHomeViewModel(dependencyActions: actions, fetchImageUseCase: makeFetchImageUseCase())
   }
 
   func makeCoordinator(navigationController: UINavigationController) -> Coordinator {
@@ -37,7 +37,7 @@ extension HomeSceneDIContainer: HomeSceneFlowCoordinatorDependencies {
     LocationSearchController()
   }
 
-  func makeHomeViewController() -> HomeViewController {
-    HomeViewController()
+  func makeHomeViewController(actions: DefaultHomeViewModel.DependencyActions) -> HomeViewController {
+    HomeViewController.create(with: makeHomeViewModel(actions: actions))
   }
 }

@@ -60,7 +60,7 @@ extension HomeViewController: UISearchBarDelegate {
     searchBar.resignFirstResponder()
 
     DispatchQueue.main.async {
-      self.navigationController?.pushViewController(LocationSearchController(), animated: true)
+      self.viewModel?.action.showLocationSearch()
     }
   }
 }
