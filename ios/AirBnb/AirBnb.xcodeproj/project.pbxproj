@@ -36,6 +36,7 @@
 		E4AC38D92851BC830027A1E6 /* WishSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC38D82851BC830027A1E6 /* WishSceneDIContainer.swift */; };
 		E4AC38DB2851BC8A0027A1E6 /* ReservationSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC38DA2851BC8A0027A1E6 /* ReservationSceneDIContainer.swift */; };
 		E4AC38DF2851BEB00027A1E6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC38DE2851BEB00027A1E6 /* Coordinator.swift */; };
+		E4BBAEBA28518D950066FB40 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBAEB928518D950066FB40 /* TabBarCoordinator.swift */; };
 		E4BBAEC02851A29F0066FB40 /* TabBarDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBAEBF2851A29F0066FB40 /* TabBarDIContainer.swift */; };
 		E4BE2A47283DFD48000099E5 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2A46283DFD48000099E5 /* WishListViewController.swift */; };
 		E4BE2A49283DFD5F000099E5 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2A48283DFD5F000099E5 /* ReservationViewController.swift */; };
@@ -86,6 +87,7 @@
 		E4AC38D82851BC830027A1E6 /* WishSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishSceneDIContainer.swift; sourceTree = "<group>"; };
 		E4AC38DA2851BC8A0027A1E6 /* ReservationSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationSceneDIContainer.swift; sourceTree = "<group>"; };
 		E4AC38DE2851BEB00027A1E6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E4BBAEB928518D950066FB40 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		E4BBAEBF2851A29F0066FB40 /* TabBarDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDIContainer.swift; sourceTree = "<group>"; };
 		E4BE2A37283CC86E000099E5 /* Toolbox */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Toolbox; sourceTree = "<group>"; };
 		E4BE2A3D283DFA7B000099E5 /* AirBnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirBnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +250,7 @@
 			children = (
 				E4AC38DE2851BEB00027A1E6 /* Coordinator.swift */,
 				E430BD55284F4BA100BA766A /* AppCoordinator.swift */,
+				E4BBAEB928518D950066FB40 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				E430BD56284F4BA100BA766A /* AppCoordinator.swift in Sources */,
 				E4E3C2A7284855A200B5F7E1 /* ImageFactory.swift in Sources */,
 				E4AC38DF2851BEB00027A1E6 /* Coordinator.swift in Sources */,
+				E4BBAEBA28518D950066FB40 /* TabBarCoordinator.swift in Sources */,
 				E4AC38D32851B7D40027A1E6 /* ReservationSceneFlowCoordinator.swift in Sources */,
 				E4E3C2B42848AC6200B5F7E1 /* NetworkService.swift in Sources */,
 				E471A09A2840673E00232E5F /* SectionFactory.swift in Sources */,
