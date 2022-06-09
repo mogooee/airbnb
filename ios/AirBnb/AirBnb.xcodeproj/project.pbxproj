@@ -30,6 +30,7 @@
 		E471A0AA2840BA7600232E5F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E471A0A92840BA7600232E5F /* HomeViewModel.swift */; };
 		E4891B6B2849D35D009B2F60 /* HomeSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4891B6A2849D35D009B2F60 /* HomeSceneDIContainer.swift */; };
 		E4891B6E2849DD9C009B2F60 /* DefaultImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4891B6D2849DD9C009B2F60 /* DefaultImageService.swift */; };
+		E4AC38D32851B7D40027A1E6 /* ReservationSceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC38D22851B7D40027A1E6 /* ReservationSceneFlowCoordinator.swift */; };
 		E4AC38D72851BC130027A1E6 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC38D62851BC130027A1E6 /* DIContainer.swift */; };
 		E4AC38D92851BC830027A1E6 /* WishSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC38D82851BC830027A1E6 /* WishSceneDIContainer.swift */; };
 		E4AC38DB2851BC8A0027A1E6 /* ReservationSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC38DA2851BC8A0027A1E6 /* ReservationSceneDIContainer.swift */; };
@@ -78,6 +79,7 @@
 		E471A0A92840BA7600232E5F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E4891B6A2849D35D009B2F60 /* HomeSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneDIContainer.swift; sourceTree = "<group>"; };
 		E4891B6D2849DD9C009B2F60 /* DefaultImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImageService.swift; sourceTree = "<group>"; };
+		E4AC38D22851B7D40027A1E6 /* ReservationSceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationSceneFlowCoordinator.swift; sourceTree = "<group>"; };
 		E4AC38D62851BC130027A1E6 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E4AC38D82851BC830027A1E6 /* WishSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishSceneDIContainer.swift; sourceTree = "<group>"; };
 		E4AC38DA2851BC8A0027A1E6 /* ReservationSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				E4AC38DA2851BC8A0027A1E6 /* ReservationSceneDIContainer.swift */,
+				E4AC38D22851B7D40027A1E6 /* ReservationSceneFlowCoordinator.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				E430BD56284F4BA100BA766A /* AppCoordinator.swift in Sources */,
 				E4E3C2A7284855A200B5F7E1 /* ImageFactory.swift in Sources */,
 				E4AC38DF2851BEB00027A1E6 /* Coordinator.swift in Sources */,
+				E4AC38D32851B7D40027A1E6 /* ReservationSceneFlowCoordinator.swift in Sources */,
 				E4E3C2B42848AC6200B5F7E1 /* NetworkService.swift in Sources */,
 				E471A09A2840673E00232E5F /* SectionFactory.swift in Sources */,
 				E430BD58284F4C1B00BA766A /* AppDIContainer.swift in Sources */,
