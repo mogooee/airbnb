@@ -17,7 +17,7 @@ export type PersonnelType = {
 };
 
 export interface InfoType {
-  title: string & string[];
+  title: string;
   defaultValue: string;
   value?: object;
 }
