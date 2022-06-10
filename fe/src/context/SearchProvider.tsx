@@ -1,50 +1,20 @@
 import React, { useContext, createContext, useReducer, Dispatch } from 'react';
+import { SearchType, addSearchType } from 'components/SearchBar/types';
 
-interface SearchType {
-  period: object;
-  price: object;
-  personnel: object;
-}
-
-interface PeriodType {
-  checkIn: number;
-  checkOut: number;
-}
-
-interface PriceType {
-  minPrice: number;
-  maxPrice: number;
-}
-
-interface PersonnelType {
-  adult: number;
-  teenager: number;
-  child: number;
-}
-
-type ActionType =
-  | {
-      type: 'SET_PERIOD';
-      value: PeriodType;
-    }
-  | {
-      type: 'SET_PRICE';
-      value: PriceType;
-    }
-  | {
-      type: 'SET_PERSONNEL';
-      value: PersonnelType;
-    };
-
-function searchReducer(searches: SearchType, action: ActionType): SearchType {
+function searchReducer(searches: SearchType, action: addSearchType): SearchType {
   const { type, value } = action;
   switch (type) {
+    case 'INIT_VALUE':
+      Object.keys(searches[value]).forEach((key) => {
+        Object.assign(searches, { [value]: { ...searches[value], [key]: null } });
+      });
+      return { ...searches };
     case 'SET_PERIOD':
       return {
         ...searches,
         period: {
-          checkIn: value.checkIn,
-          checkOut: value.checkOut,
+          ...searches.period,
+          ...value,
         },
       };
     case 'SET_PRICE':
@@ -55,49 +25,39 @@ function searchReducer(searches: SearchType, action: ActionType): SearchType {
     case 'SET_PERSONNEL':
       return {
         ...searches,
-        personnel: { adult: value.adult, teenager: value.teenager, child: value.child },
+        personnel: {
+          ...searches.personnel,
+          ...value,
+        },
       };
     default:
       throw new Error('Unhandled action');
   }
 }
 
-type DispatchType = Dispatch<ActionType>;
+type DispatchType = Dispatch<addSearchType>;
 
 export const SearchContext = createContext<SearchType | null>(null);
 export const AddSearchContext = createContext<DispatchType | null>(null);
 
 const initSearch = {
   period: {
-    title: ['체크인', '체크아웃'],
-    defaultValue: '날짜입력',
-    value: {
-      checkIn: 0,
-      checkOut: 0,
-    },
+    checkIn: undefined,
+    checkOut: undefined,
   },
   price: {
-    title: '요금',
-    defaultValue: '금액대 설정',
-    value: {
-      minPrice: 0,
-      maxPrice: 0,
-    },
+    minPrice: undefined,
+    maxPrice: undefined,
   },
   personnel: {
-    title: '인원',
-    defaultValue: '게스트 추가',
-    value: {
-      adult: 0,
-      teenager: 0,
-      child: 0,
-    },
+    adult: undefined,
+    teenager: undefined,
+    child: undefined,
   },
 };
 
-export function SearchProvider({ children }: { children: React.ReactNode }) {
+export function SearchProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [searches, addSearch] = useReducer(searchReducer, initSearch);
-
   return (
     <SearchContext.Provider value={searches}>
       <AddSearchContext.Provider value={addSearch}>{children}</AddSearchContext.Provider>
@@ -113,6 +73,6 @@ export function useSearch() {
 
 export function useAddSearch() {
   const addSearch = useContext(AddSearchContext);
-  if (!addSearch) throw new Error('Cannot find SearchProvider');
+  if (!addSearch) throw new Error('Cannot find AddSearchProvider');
   return addSearch;
 }

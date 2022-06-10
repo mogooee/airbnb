@@ -3,6 +3,7 @@ import reset from 'styled-reset';
 import { createGlobalStyle } from 'styled-components';
 import Routers from 'components/Routers/Routers';
 import { SearchProvider } from 'context/SearchProvider';
+import { ModalProvider } from 'context/ModalProvider';
 
 const GlobalStyles = createGlobalStyle`
     ${reset};
@@ -11,13 +12,15 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <div className="App">
       <GlobalStyles />
-      <SearchProvider>
-        <Routers />
-      </SearchProvider>
+      <ModalProvider>
+        <SearchProvider>
+          <Routers />
+        </SearchProvider>
+      </ModalProvider>
     </div>
   );
 }
