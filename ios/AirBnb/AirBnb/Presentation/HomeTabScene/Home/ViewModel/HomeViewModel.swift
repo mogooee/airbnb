@@ -36,11 +36,11 @@ struct NearCity {
   var image: String = imageUrl
 }
 
-struct DefaultHomeViewModel: HomeViewModel {
-  struct DependencyActions {
-    let showLocationSearch: () -> Void
-  }
+struct HomeViewDependencyActions {
+  let showLocationSearch: () -> Void
+}
 
+struct DefaultHomeViewModel: HomeViewModel {
   var action: HomeViewModelAction { self }
   var state: HomeViewModelState { self }
 
@@ -68,9 +68,9 @@ struct DefaultHomeViewModel: HomeViewModel {
 
   private let fetchImageUseCase: FetchImageUseCase
 
-  private let dependencyActions: DependencyActions
+  private let dependencyActions: HomeViewDependencyActions
 
-  init(dependencyActions: DependencyActions, fetchImageUseCase: FetchImageUseCase) {
+  init(dependencyActions: HomeViewDependencyActions, fetchImageUseCase: FetchImageUseCase) {
     self.dependencyActions = dependencyActions
     self.fetchImageUseCase = fetchImageUseCase
   }

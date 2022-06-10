@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeSceneFlowCoordinatorDependencies {
-  func makeHomeViewController(actions: DefaultHomeViewModel.DependencyActions) -> HomeViewController
+  func makeHomeViewController(actions: HomeViewDependencyActions) -> HomeViewController
   func makeLocationSearchViewController() -> LocationSearchController
 }
 
@@ -22,7 +22,7 @@ final class HomeSceneFlowCoordinator: Coordinator {
   }
 
   func start() {
-    let actions = DefaultHomeViewModel.DependencyActions(showLocationSearch: showLocationSearch)
+    let actions = HomeViewDependencyActions(showLocationSearch: showLocationSearch)
     let viewController = dependencies.makeHomeViewController(actions: actions)
     navigationController.viewControllers = [viewController]
   }

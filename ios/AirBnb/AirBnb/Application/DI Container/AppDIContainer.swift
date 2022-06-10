@@ -11,7 +11,7 @@ import UIKit
 // 각 Container 가 필요로 하는 공통의 의존성(Network 등)을 AppDIContainer 를 통해 주입
 final class AppDIContainer {
   // MARK: - DI Containers of scene for instance, login, splash etc.
-  func makeTabBarDIContainer() -> TabBarDIContainer {
+  func makeTabBarDIContainer() -> DIContainer {
     TabBarDIContainer(dependencies: .init(
       homeSceneDIContainer: makeHomeSceneDIContainer(),
       wishSceneDIContainer: makeWishSceneDIContainer(),
