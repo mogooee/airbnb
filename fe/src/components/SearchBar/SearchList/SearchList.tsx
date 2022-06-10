@@ -26,10 +26,9 @@ export default function SearchList({
   const content = useContentModal();
   const setContent = useSetContentModal();
 
-  const handleModalClose = (event: { stopPropagation: () => void }) => {
+  const handleModalClose = () => {
     setActiveModal(false);
     setContent('');
-    event.stopPropagation();
   };
 
   const hasValue = () => Object.values(search?.[id]).filter((e) => e).length > 0;
