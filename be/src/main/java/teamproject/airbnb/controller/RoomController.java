@@ -40,16 +40,7 @@ public class RoomController {
 //	}
 	@GetMapping("/search")
 	public RoomSimpleInfoResponseDto loadInfoList(
-		@RequestParam(name = "checkIn") LocalDate checkIn,
-		@RequestParam(name = "checkOut") LocalDate checkOut,
-		@RequestParam(name = "minimum") Long minimumPrice,
-		@RequestParam(name = "maximum") Long maximumPrice,
-		@RequestParam(name = "guest") int guestCount,
-		@RequestParam(name = "kid") int kidCount,
-		@RequestParam(name = "memberId") int memberId) {
-
-		RoomSearchInfoRequestDto requestDto = new RoomSearchInfoRequestDto(checkIn, checkOut,
-			minimumPrice, maximumPrice, guestCount, kidCount, memberId);
+		RoomSearchInfoRequestDto requestDto) {
 
 		return RoomSimpleInfoResponseDto.of(roomService.loadSimpleInfoList(
 				requestDto),
